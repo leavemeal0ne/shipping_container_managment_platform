@@ -1,15 +1,13 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
+	pb "github.com/leavemeal0ne/shipping_container_managment_platform/shippy-service-consignment/proto/consignment"
+	"google.golang.org/grpc"
 	"io/ioutil"
 	"log"
 	"os"
-
-	"context"
-
-	pb "github.com/leavemeal0ne/shipping_container_managment_platform/shippy-service-consignment/proto/consignment"
-	"google.golang.org/grpc"
 )
 
 const (
@@ -18,7 +16,7 @@ const (
 )
 
 func parseFile(file string) (*pb.Consignment, error) {
-	var consignment pb.Consignment
+	var consignment *pb.Consignment
 	data, err := ioutil.ReadFile(file)
 	if err != nil {
 		return nil, err
