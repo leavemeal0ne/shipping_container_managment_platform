@@ -1,4 +1,4 @@
-module github.com/leavemeal0ne/shipping_container_managment_platform/shippy-service-consignment
+module github.com/leavemeal0ne/shipping_container_managment_platform/shippy-service-vessel
 
 go 1.20
 

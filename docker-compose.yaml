@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  ship-cli:
+    image: shippy-cli-consignment
+    depends_on:
+      - ship-consignment
+  ship-consignment:
+    image: shippy-service-consignment
+    ports:
+      - "50051:50051"
